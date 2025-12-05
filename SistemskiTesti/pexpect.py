@@ -18,8 +18,8 @@ class pexpect:
     def __init__(self):
         commandLine = ["java",
                        "-cp",
-                       "D:\\IdeaProjects\\Testiranje in kakovost\\src\\main\\java",
-                       "domaca_naloga2.Aplikacija"]
+                       "path-to-app",
+                       "file-app"]
         self.process = subprocess.Popen(commandLine,
                                         stdin=subprocess.PIPE,
                                         stdout=subprocess.PIPE,

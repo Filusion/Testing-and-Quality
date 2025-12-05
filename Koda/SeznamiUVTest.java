@@ -52,7 +52,7 @@ public class SeznamiUVTest {
     public void testAdd() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -67,7 +67,7 @@ public class SeznamiUVTest {
     public void testAddNapSt() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230455\n";
+                "632304\n";
 
         System.setIn(new ByteArrayInputStream(simulatedUserInput.getBytes()));
         assertEquals("Napačni podatki", uv.processInput("dodaj"));
@@ -82,7 +82,7 @@ public class SeznamiUVTest {
     public void testAddNapPr() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "TK\n";
@@ -95,7 +95,7 @@ public class SeznamiUVTest {
     public void testAddNapLeto() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -109,7 +109,7 @@ public class SeznamiUVTest {
     public void testAddZeObst() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -126,7 +126,7 @@ public class SeznamiUVTest {
     public void testOdstraniVpSt() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -135,21 +135,21 @@ public class SeznamiUVTest {
 
         System.setIn(new ByteArrayInputStream(simulatedUserInput.getBytes()));
         assertEquals("V redu", uv.processInput("dodaj"));
-        assertEquals("V redu", uv.processInput("odstrani 63230453"));
+        assertEquals("V redu", uv.processInput("odstrani 63333334"));
     }
 
     @Test
     public void testOdstraniNapSt() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
-        assertEquals("Napačni podatki", uv.processInput("odstrani 63230455"));
-        assertEquals("Napačni podatki", uv.processInput("odstrani 65230455"));
+        assertEquals("Napačni podatki", uv.processInput("odstrani 63230442"));
+        assertEquals("Napačni podatki", uv.processInput("odstrani 63230442"));
     }
 
     @Test
     public void testOdstraniVpStNeObst() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -165,7 +165,7 @@ public class SeznamiUVTest {
     public void testOdstraniIme() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -183,7 +183,7 @@ public class SeznamiUVTest {
     public void testOdstraniImeNeObst() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -200,14 +200,14 @@ public class SeznamiUVTest {
     @Test
     public void testOdstraniEmpty() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
-        assertEquals("Diplomant ne obstaja", uv.processInput("odstrani 63230453"));
+        assertEquals("Diplomant ne obstaja", uv.processInput("odstrani 63333334"));
     }
 
     @Test
     public void testPoisciVp() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -216,14 +216,14 @@ public class SeznamiUVTest {
 
         System.setIn(new ByteArrayInputStream(simulatedUserInput.getBytes()));
         assertEquals("V redu", uv.processInput("dodaj"));
-        assertEquals("\t63230453 | Maguire, Tobey | VSS RI | 2026 | Naslov diplome", uv.processInput("poisci 63230453"));
+        assertEquals("\63333334 | Maguire, Tobey | VSS RI | 2026 | Naslov diplome", uv.processInput("poisci 63333334"));
     }
 
     @Test
     public void testPoisciVpNeObst() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -239,7 +239,7 @@ public class SeznamiUVTest {
     public void testPoisciIme() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -251,14 +251,14 @@ public class SeznamiUVTest {
 
         simulatedUserInput = "Tobey\n" + "Maguire\n";
         System.setIn(new ByteArrayInputStream(simulatedUserInput.getBytes()));
-        assertEquals("\t63230453 | Maguire, Tobey | VSS RI | 2026 | Naslov diplome", uv.processInput("poisci"));
+        assertEquals("\63333334 | Maguire, Tobey | VSS RI | 2026 | Naslov diplome", uv.processInput("poisci"));
     }
 
     @Test
     public void testPoisciImeNeObst() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -277,7 +277,7 @@ public class SeznamiUVTest {
     public void testPoisciNap() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -286,7 +286,7 @@ public class SeznamiUVTest {
 
         System.setIn(new ByteArrayInputStream(simulatedUserInput.getBytes()));
         assertEquals("V redu", uv.processInput("dodaj"));
-        assertEquals("Napačni podatki", uv.processInput("poisci 63230455"));
+        assertEquals("Napačni podatki", uv.processInput("poisci 63230442"));
     }
 
     @Test
@@ -315,7 +315,7 @@ public class SeznamiUVTest {
     public void testIzpisi() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
@@ -343,7 +343,7 @@ public class SeznamiUVTest {
     public void testShraniPovrni() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
         String simulatedUserInput =
-                "63230453\n" +
+                "63333334\n" +
                         "Tobey\n" +
                         "Maguire\n" +
                         "VSS RI\n" +
