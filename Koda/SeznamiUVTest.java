@@ -72,7 +72,7 @@ public class SeznamiUVTest {
         System.setIn(new ByteArrayInputStream(simulatedUserInput.getBytes()));
         assertEquals("Napačni podatki", uv.processInput("dodaj"));
         simulatedUserInput =
-                "22230455\n";
+                "63230000\n";
 
         System.setIn(new ByteArrayInputStream(simulatedUserInput.getBytes()));
         assertEquals("Napačni podatki", uv.processInput("dodaj"));
@@ -141,8 +141,8 @@ public class SeznamiUVTest {
     @Test
     public void testOdstraniNapSt() {
         assertEquals("V redu", uv.processInput("uporabi 23"));
-        assertEquals("Napačni podatki", uv.processInput("odstrani 63230442"));
-        assertEquals("Napačni podatki", uv.processInput("odstrani 63230442"));
+        assertEquals("Napačni podatki", uv.processInput("odstrani 63230000"));
+        assertEquals("Napačni podatki", uv.processInput("odstrani 63230000"));
     }
 
     @Test
@@ -286,7 +286,7 @@ public class SeznamiUVTest {
 
         System.setIn(new ByteArrayInputStream(simulatedUserInput.getBytes()));
         assertEquals("V redu", uv.processInput("dodaj"));
-        assertEquals("Napačni podatki", uv.processInput("poisci 63230442"));
+        assertEquals("Napačni podatki", uv.processInput("poisci 63230000"));
     }
 
     @Test
